@@ -1,7 +1,9 @@
 # nodeBejmach
 
 paths:
+    
     localhost:8080
+        
         / - strona główna,
 
         /json - json,
