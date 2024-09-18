@@ -33,6 +33,7 @@ http.createServer(function (req, res) {
 				console.error(err);
 			}
 		});
+		res.write('{"ok": "ok"}');
 	}
 	res.end();
 }).listen(port);
