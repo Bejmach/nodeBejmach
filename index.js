@@ -25,7 +25,7 @@ http.createServer(function (req, res) {
 	if(q.pathname == '/get_params'){
 		var query = q.query;
 		for(i=0;i<Object.keys(query).length; i++){
-			res.write(Object.keys(query)[i]+": "+query[Object.keys(query)[i]]+"\n");
+			console.log(Object.keys(query)[i]+": "+query[Object.keys(query)[i]]);
 		}
 		var path = "./params_"+Date.now()+".json";
 		fs.writeFile(path, JSON.stringify(query, null, 4), err =>{
