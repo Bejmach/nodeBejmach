@@ -47,11 +47,8 @@ http.createServer(function (req, res) {
 		console.log('assets'+q.pathname);
 		console.log(mime.lookup('assets'+q.pathname));
 		fs.readFile('./assets'+q.pathname, 'utf8', function(err, data){
-			console.log(data);
-			res.write(data);
 			if(err){
 				console.log('error');
-				res.writeHead(200, {'Content-Type': 'application/json'})
 				res.statusCode = 404;
 				res.write(JSON.stringify({error: 404}));
 			}
@@ -63,8 +60,8 @@ http.createServer(function (req, res) {
 					res.write(JSON.stringify(data));
 				}
 				else{
-					res.write(data+'1');
-					console.log('data');
+					res.end(data);
+					console.log(data);
 				}
 				res.write(data+'2');
 			}
