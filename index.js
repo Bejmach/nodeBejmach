@@ -7,20 +7,21 @@ const port = 8080;
 
 http.createServer(function (req, res) {
 	var q = url.parse(req.url, true);
-	if(q.pathname === '/'){
+	console.log(q.pathname);
+	if(q.pathname == '/'){
 		console.log('/');
 		res.write('Strona Glowna');
 	}
-	if(q.pathname === '/json'){
+	else if(q.pathname == '/json'){
 		console.log('/json');
 		res.write('{"json":{"servers":{"users"{"user"{"name":"test","id":1}}}}}');
 	}
-	if(q.pathname === '/htmlGen'){
+	else if(q.pathname == '/htmlGen'){
 		console.log('/htmlGen');
 		var html = '<H1>Test page</H1><div>node js from code</div>'
 		res.write(html);
 	}
-	if(q.pathname === '/htmlFile'){
+	else if(q.pathname == '/htmlFile'){
 
 		console.log('/htmlFile');
 		fs.readFile('index.html', function(err, data) {
@@ -28,7 +29,7 @@ http.createServer(function (req, res) {
 			res.write(data);
 		})
 	}
-	if(q.pathname === '/get_params'){
+	else if(q.pathname == '/get_params'){
 		console.log('/get_params');
 		var query = q.query;
 		for(i=0;i<Object.keys(query).length; i++){
@@ -45,23 +46,29 @@ http.createServer(function (req, res) {
 	else{
 		console.log('assets'+q.pathname);
 		console.log(mime.lookup('assets'+q.pathname));
-		fs.readFile('assets'+q.pathname, function(err, data){
+		fs.readFile('./assets'+q.pathname, 'utf8', function(err, data){
+			console.log(data);
+			res.write(data);
 			if(err){
+				console.log('error');
 				res.writeHead(200, {'Content-Type': 'application/json'})
 				res.statusCode = 404;
 				res.write(JSON.stringify({error: 404}));
 			}
 			else{
-				var mimeVar = mime.lookup('assets'+q.pathname);
-				res.setHeader('Content-Type', mimeVar);
+				var mimeVar = mime.lookup('./assets'+q.pathname);
+				//res.writeHead('Content-Type', mimeVar);
+				console.log('head');
 				if(mimeVar == 'application/json'){
 					res.write(JSON.stringify(data));
 				}
 				else{
-					res.write(data);
+					res.write(data+'1');
+					console.log('data');
 				}
+				res.write(data+'2');
 			}
-			return res.end();
+			res.write(data+'3');
 		})
 	}
 	res.end();
