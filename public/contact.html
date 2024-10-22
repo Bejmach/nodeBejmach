@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express</title>
+    <link rel="stylesheet" href="http://localhost:3000/static/style.css">
+</head>
+<body>
+    <nav>
+        <a href="http://localhost:3000/">Strona główna</a>
+        <a href="http://localhost:3000/o-nas">O nas</a>
+        <a href="http://localhost:3000/oferta">Oferta</a>
+        <a href="http://localhost:3000/kontakt">Kontakt</a>
+    </nav>
+    <h1>Kontakt</h1>
+    <form action="http://localhost:3000/kontakt" method="post">
+        <label for="name">Imię</label>
+        <input type="text" name="name" id="surname">
+        <label for="surname">Nazwisko</label>
+        <input type="text" name="surname" id="surname">
+        <label for="email">Mail</label>
+        <input type="email" name="email" id="email">
+        <label for="textArea">Strefa tekstu</label>
+        <textarea name="textArea" id="textArea" cols="50" rows="4"></textarea>
+        <input type="submit" value="submit">            
+    </form>
+    <footer>Maciej Bejmowicz 4C</footer>
+</body>
+</html>

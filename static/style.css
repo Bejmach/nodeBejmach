@@ -1,0 +1,10 @@
+body{
+    margin: 0;
+}
+p{
+    background-color: black;
+    color:white;
+}
+footer{
+    border: 2px black dotted;
+}

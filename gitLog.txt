@@ -1,0 +1,6 @@
+7ee0443 cleaning and names to task
+1ac999a not working YOU FUCKING PIECE OF SHIT! THE contact.js AND contact.html looks the same as index, and your telling me that there is no engine specyfied??? sure, whatever, node and express, kys
+dce2d55 lessonend2.0v
+84bc4b4 endo of lessono
+d49bd34 readme
+345df59 init
