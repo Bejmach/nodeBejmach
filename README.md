@@ -22,3 +22,11 @@ localhost:3000
 * /htmlFile - html from file
 * /get_params?x=x&y=y - get params and return them to files
 * /{filename} - print the content of file in directory assets/
+
+### Express2
+localhost:3000
+* / - main page
+* /o-nas - about
+* /oferta - offer
+* /kontakt - form
+* (post)/kontakt - print data from form to cmd, and refirect to main
