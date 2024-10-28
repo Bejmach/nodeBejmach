@@ -30,3 +30,13 @@ localhost:3000
 * /oferta - offer
 * /kontakt - form
 * (post)/kontakt - print data from form to cmd, and refirect to main
+
+### ExpressSql
+localhost:3000
+* / - main page
+* /o-nas - about
+* /oferta - offer
+* /kontakt - form
+* (post)/kontakt - print data from form to cmd, and refirect to main
+* /api/contact-messages - print all data from table messages from database express
+* /api/contact-messages/:{id} - print data from row specyfied by Id provided in url
