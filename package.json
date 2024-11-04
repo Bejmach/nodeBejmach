@@ -1,22 +1,16 @@
 {
-  "name": "npmbejmach",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "express-prisma",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Bejmach/nodePracownia\u001b[C\u001b[D.git"
-  },
-  "author": "Bejmach",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Bejmach/nodePracownia\u001b[C\u001b[D/issues"
-  },
-  "homepage": "https://github.com/Bejmach/nodePracownia\u001b[C\u001b[D#readme",
   "dependencies": {
-    "mime-types": "^2.1.35"
+    "@prisma/client": "^5.21.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "morgan": "~1.9.1",
+    "prisma": "^5.21.1"
   }
 }
