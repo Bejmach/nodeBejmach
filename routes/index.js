@@ -26,6 +26,16 @@ router.get('/o-nas', function(req, res, next) {
   })
 });
 router.post('/kontakt', function(req, res, next){
+  const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'express'
+  })
+  connection.connect();
+  connection.query(`INSERT INTO messages (name, surname, email, text) values (${req.body.name}, ${req.body.surname}, ${req.body.email}, ${req.body.textArea})`, (err,rows,fields)=>{
+    if(err) throw err;
+  })
   console.log(req.body);
   res.redirect("http://localhost:3000/");
 });
