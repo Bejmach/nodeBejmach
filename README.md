@@ -32,6 +32,7 @@ localhost:3000
 * (post)/kontakt - print data from form to cmd, and refirect to main
 
 ### ExpressSql
+you need to create database in xampp, name: express, tables: varchar(50) name, varchar(50) surname, varchar(50) email, varchar(255) text
 localhost:3000
 * / - main page
 * /o-nas - about
