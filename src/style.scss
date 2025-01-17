@@ -1,0 +1,35 @@
+$primary-color: #ff4d4f;
+$background-color: #f9f9f9;
+$text-color: #333;
+
+$border-radius: 8px;
+$border-color: rgba(0, 0, 0, 0.1);
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.card {
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  padding: 16px;
+  background-color: #fff;
+  margin-bottom: 16px;
+}
+
+header {
+  background-color: $primary-color;
+  color: #fff;
+  padding: 16px;
+  text-align: center;
+  border-radius: $border-radius;
+}
