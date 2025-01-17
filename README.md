@@ -1,18 +1,5 @@
-# express_prisma
+# React 3 pages
 
-## before use
-* create empty database
-* create .env file in root folder with DATABASE_URL set to url of the database
-* run "npx prisma migrate dev --name init"
+npm run dev
 
-###create
-/api/comment/create/:userName/:text
-
-###update
-/api/comment/update/:id/:userName/:text
-
-###remove
-/api/comment/delete/:id
-
-###find
-/api/comment/find/:id
+http://localhost:5173/
