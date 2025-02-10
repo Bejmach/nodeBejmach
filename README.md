@@ -1,50 +1,15 @@
-# nodeBejmach
+# Vite fronend with node backend
 
-## Types(on branches)
-* Node(main)
-* Express(express)
+## Backend
 
-## Paths
-### Node
-localhost:8080
-* / - main page
-* /json - json
-* /htmlGet - html from server
-* /htmlFile - html from file
-* /get_params?x=x&y=y - get params and return them to files
-* /{filename} - print the content of file in directory assets/
+Go to ./backend and run "node node.js". This will run the backend on port 5000 with paths
 
-### Express
-localhost:3000
-* / - main page
-* /json - json
-* /htmlGet - html from server
-* /htmlFile - html from file
-* /get_params?x=x&y=y - get params and return them to files
-* /{filename} - print the content of file in directory assets/
+- http://localhost:5000/posts - all posts
+- http://localhost:5000/posts/{:id} - one post
 
-### Express2
-localhost:3000
-* / - main page
-* /o-nas - about
-* /oferta - offer
-* /kontakt - form
-* (post)/kontakt - print data from form to cmd, and refirect to main
+## Frontend
 
-### ExpressSql
-you need to create database in xampp, name: express, tables: varchar(50) name, varchar(50) surname, varchar(50) email, varchar(255) text
-localhost:3000
-* / - main page
-* /o-nas - about
-* /oferta - offer
-* /kontakt - form
-* (post)/kontakt - print data from form to cmd, and refirect to main
-* /api/contact-messages - print all data from table messages from database express
-* /api/contact-messages/:{id} - print data from row specyfied by Id provided in url
+Go to ./frontend and run "npm run dev". This will run the frontend on port 5173 with paths
 
-### Prisma
-additional branch with its own README. Go there to see explanations
-
-### React 3Pages/Blog/Api
-additional branch with its own README. Go there to see explanations
-
+- http://localhost:5173 - all posts
+- http://localhost:5173/{:id} - one post
