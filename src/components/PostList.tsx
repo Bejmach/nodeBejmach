@@ -27,16 +27,12 @@ export default function PostList() {
   return (
     <div>
       <h1>Posts</h1>
-      <div  className="post">
+      <div className="post">
         {data?.map((post) => (
-          <Link
-            to={`/post/${post.id}`}
-            key={post.id}
-			className="link"
-          >
-            <h2 >{post.title}</h2>
+          <Link to={`/post/${post.id}`} key={post.id} className="link">
+            <h2>{post.title}</h2>
             <p>{post.body.slice(0, 100)}...</p>
-			<hr/>
+            <hr />
           </Link>
         ))}
       </div>

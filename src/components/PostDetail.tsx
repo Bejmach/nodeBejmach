@@ -28,12 +28,13 @@ export default function PostDetail() {
 
   return (
     <div>
-     <div className="post">
+      <div className="post">
         <h1>{data?.title}</h1>
         <p>{data?.body}</p>
       </div>
-	<Link to="/" className="link2">&larr; Back to Posts</Link>
-
-	</div>
+      <Link to="/" className="link2">
+        &larr; Back to Posts
+      </Link>
+    </div>
   );
 }
