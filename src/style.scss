@@ -33,3 +33,22 @@ header {
   text-align: center;
   border-radius: $border-radius;
 }
+
+.post {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 16px;
+  background-color: #fff;
+}
+
+.link{
+  text-decoration: none;
+  color: #000;
+  padding: 3px;
+}
+.link2{
+  text-decoration: none;
+  color: #000;
+  margin: 5px;
+}
+
